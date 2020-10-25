@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body class="bg-dark text-primary">
+    
+    <div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+      <form>
+        <div class="form-group">
+          <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">
+        </div>
+      </form>
+      <div id="output">
+        <div class="card card-primary mb-2">
+          <div class="card-block">
+            <h4>Grams:</h4>
+            <div id="gramsOutput"></div>
+          </div>
+        </div>
+
+        <div class="card card-success mb-2">
+          <div class="card-block">
+            <h4>Kilograms:</h4>
+            <div id="kgOutput"></div>
+          </div>
+        </div>
+
+        <div class="card card-block mb-2">
+          <div class="card-danger">
+            <h4>Ounces:</h4>
+            <div id="ozOutput"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<script>
+  document.getElementById('output').style.background='';
+  console.log(document.getElementById('output'));
+  document.getElementById('lbsInput').addEventListener('input',function(e){
+
+document.getElementById('output').style.visibility='visible';
+
+let lbs=e.target.value;
+console.log(lbs);
+document.getElementById('gramsOutput').innerHTML=lbs/0.0022046;
+console.log(document.getElementById('gramsOutput').innerHTML=lbs/0.0022046);
+document.getElementById('kgOutput').innerHTML=lbs/2.2046;
+document.getElementById('ozOutput').innerHTML=lbs*16;
+
+  });
+
+</script>
+
+      </body>
+</html>
